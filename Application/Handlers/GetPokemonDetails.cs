@@ -1,4 +1,5 @@
 ﻿using Application.Core;
+using Application.Clients;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
@@ -13,12 +14,16 @@ public class GetPokemonDetailsQuery : IRequest<Result<GetPokemonDetailsResponse>
 
 public class GetPokemonDetailsHandler : IRequestHandler<GetPokemonDetailsQuery, Result<GetPokemonDetailsResponse>>
 {
-    public GetPokemonDetailsHandler()
+    private readonly IPokemonClient _pokemonClient;
+    public GetPokemonDetailsHandler(IPokemonClient pokemonClient)
     {
+        _pokemonClient = pokemonClient;
     }
 
     public async Task<Result<GetPokemonDetailsResponse>> Handle(GetPokemonDetailsQuery request, CancellationToken cancellationToken)
     {
+        var pokemon = await _pokemonClient.GetPokemonByName(request.Name.ToLower());
+
         GetPokemonDetailsResponse response = new GetPokemonDetailsResponse
         {
             Name = request.Name,
