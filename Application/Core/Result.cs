@@ -1,5 +1,9 @@
 ﻿namespace Application.Core;
 
+/// <summary>
+/// Generic class for managing the results sended by the Application layer, it helps for controlling and validating errors between different layers
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class Result<T>
 {
     public bool IsSuccess { get; set; }

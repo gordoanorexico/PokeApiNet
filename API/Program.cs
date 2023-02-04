@@ -10,9 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Adding all the initializations from the Application layer in a separated class for ordering
 builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
+
+//Exception Middleware for controlling errors during the execution of the application
 app.UseMiddleware<ExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

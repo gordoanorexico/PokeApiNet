@@ -2,41 +2,76 @@
 using Application.Clients;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace Application.Handlers;
-
-public class GetPokemonDetailsQuery : IRequest<Result<GetPokemonDetailsResponse>>
+/// <summary>
+/// Class GetPokemonDetails for grouping the Query (request), Handler and Response for the GetPokemonDetails functionality
+/// </summary>
+public class GetPokemonDetails
 {
-    [Required]
-    public string Name { get; set; }
-}
-
-public class GetPokemonDetailsHandler : IRequestHandler<GetPokemonDetailsQuery, Result<GetPokemonDetailsResponse>>
-{
-    private readonly IPokemonClient _pokemonClient;
-    public GetPokemonDetailsHandler(IPokemonClient pokemonClient)
+    /// <summary>
+    /// Class for the Query parameters definition
+    /// </summary>
+    public class Query : IRequest<Result<Response>>
     {
-        _pokemonClient = pokemonClient;
+        //Name of the pokemon to search, it uses DataAnnotations for marking the Name as Required (for more complex validations we could use Fluent Validations
+        [Required]
+        public string Name { get; set; }
     }
 
-    public async Task<Result<GetPokemonDetailsResponse>> Handle(GetPokemonDetailsQuery request, CancellationToken cancellationToken)
+    /// <summary>
+    /// Handler class called by the API Controller for getting the Pokemon and Characteristic data from the external services
+    /// </summary>
+    public class Handler : IRequestHandler<Query, Result<Response>>
     {
-        var pokemon = await _pokemonClient.GetPokemonByName(request.Name.ToLower());
-
-        GetPokemonDetailsResponse response = new GetPokemonDetailsResponse
+        //clients for the pokemon and characteristic services
+        private readonly IPokemonClient _pokemonClient;
+        private readonly ICharacteristicClient _characteristicClient;
+        public Handler(IPokemonClient pokemonClient, ICharacteristicClient characteristicClient)
         {
-            Name = request.Name,
-            Description = "Likes to relax",
-            Type = "electric"
-        };
-        return Result<GetPokemonDetailsResponse>.Success(response);
-    }
-}
+            //services initialized by Dependency Injection
+            _pokemonClient = pokemonClient;
+            _characteristicClient = characteristicClient;
+        }
 
-public class GetPokemonDetailsResponse
-{
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public string Type { get; set; }
+        /// <summary>
+        /// Handle Method that receives a Pokemon's name and search in the external services that Pokemon
+        /// </summary>
+        /// <param name="request">Encapsulates the Name parameter of the Pokemon</param>
+        /// <param name="cancellationToken">Optional cancellation Token</param>
+        /// <returns></returns>
+        public async Task<Result<Response>> Handle(Query request, CancellationToken cancellationToken)
+        {
+            var pokemon = await _pokemonClient.GetPokemonByName(request.Name.ToLower(), cancellationToken);
+            if (pokemon is null)
+            {
+                return Result<Response>.Failure($"Pokemon {request.Name} not found");
+            }
+                
+
+            Response response = new Response();
+            response.Name = request.Name;
+            response.Type = pokemon.Types.FirstOrDefault()?.Type.Name;
+            
+
+            var characteristic = await _characteristicClient.GetCharacteristicById(pokemon.Id, cancellationToken);
+
+            if(characteristic is null)
+            {
+                return Result<Response>.Failure($"Characteristic not found for Pokemon {request.Name}");
+            }
+
+            response.Description = characteristic?.Descriptions.FirstOrDefault(x => x.Language.Name == "en")?.Description;
+
+            return Result<Response>.Success(response);
+        }
+    }
+
+    public class Response
+    {
+        public string Name { get; set; }
+        public string? Description { get; set; }
+        public string? Type { get; set; }
+    }
 }

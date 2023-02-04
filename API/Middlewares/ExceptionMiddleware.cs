@@ -4,6 +4,9 @@ using System.Text.Json;
 
 namespace API.Middlewares;
 
+/// <summary>
+/// Middleware for controlling and logging application errors and then converting those errors to HTTP responses for the API
+/// </summary>
 public class ExceptionMiddleware
 {
     private readonly RequestDelegate _next;
