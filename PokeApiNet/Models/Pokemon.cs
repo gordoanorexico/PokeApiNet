@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace PokeApiNet
+namespace PokeApiNetDomain.Models
 {
     /// <summary>
     /// Abilities provide passive effects for Pokémon in battle or in
@@ -453,7 +453,7 @@ namespace PokeApiNet
         /// <summary>
         /// A list of natures and how they change the referenced Pokéathlon stat.
         /// </summary>
-        public List<NaturePokeathlonStatAffect> Decrease{ get; set; }
+        public List<NaturePokeathlonStatAffect> Decrease { get; set; }
     }
 
     /// <summary>
@@ -876,7 +876,7 @@ namespace PokeApiNet
                 /// </summary>
                 [JsonProperty("front_default")]
                 public string FrontDefault { get; set; }
-                
+
                 /// <summary>
                 /// The shiny depiction of this Pokémon from the front in battle.
                 /// </summary>

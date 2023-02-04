@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace PokeApiNet
+namespace PokeApiNetDomain.Models
 {
     /// <summary>
     /// Locations that can be visited within the games. Locations make

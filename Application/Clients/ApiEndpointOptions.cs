@@ -9,8 +9,6 @@ public class ApiEndpointOptions
 {
     ///Property with the name of the section in the appsettings file with the urls for the external endpoints
     public string ConfigurationSectionName { get; init; } = "ApiEndpoints";
-    //URL of the Pokemon service Endpoint
+    //URL of the Pokemon service
     public string PokemonClientUrl { get; set; } = string.Empty;
-    //URL of the Characteristic service Endpoint
-    public string CharacteristicClientUrl { get; set; } = string.Empty;
 }

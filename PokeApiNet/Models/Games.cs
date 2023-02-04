@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace PokeApiNet
+namespace PokeApiNetDomain.Models
 {
     /// <summary>
     /// A generation is a grouping of the Pokémon games that separates

@@ -13,17 +13,11 @@ public static class ApplicationServiceExtensions
         var apiEndpointOptions = new ApiEndpointOptions();
         config.GetSection(apiEndpointOptions.ConfigurationSectionName).Bind(apiEndpointOptions);
 
-        //Initializing the Clients with HTTP Client Factory
+        //Initializing the Client with HTTP Client Factory
         services.AddSingleton<IPokemonClient, PokemonClient>();
         services.AddHttpClient<IPokemonClient, PokemonClient>(client =>
         {
             client.BaseAddress = new Uri(apiEndpointOptions.PokemonClientUrl);
-        });
-
-        services.AddSingleton<ICharacteristicClient, CharacteristicClient>();
-        services.AddHttpClient<ICharacteristicClient, CharacteristicClient>(client =>
-        {
-            client.BaseAddress = new Uri(apiEndpointOptions.CharacteristicClientUrl);
         });
 
         //Registering the MediatR endpoints
