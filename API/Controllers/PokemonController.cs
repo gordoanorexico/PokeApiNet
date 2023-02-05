@@ -12,7 +12,7 @@ public class PokemonController : BaseApiController
     /// </summary>
     /// <param name="name">Name of the pokemon to search</param>
     /// <returns>An error response or an OK Response with the Pokemon's information</returns>
-    [HttpGet]
+    [HttpGet("{name}")]
     public async Task<IActionResult> GetPokemon(string name, CancellationToken cancellationToken)
     {
         return HandleResult(await Mediator.Send(new GetPokemonDetails.Query { Name = name }, cancellationToken));

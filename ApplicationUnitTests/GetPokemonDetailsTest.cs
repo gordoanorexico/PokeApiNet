@@ -6,9 +6,12 @@ using FluentAssertions;
 
 namespace ApplicationUnitTests;
 
-public class PokemonClientTests
+public class GetPokemonDetailsTest
 {
 
+    /// <summary>
+    /// Unit Test for a valid Pokemon with a valid Characteristic
+    /// </summary>
     [Fact]
     public async Task GetPokemon_PokemonValid_CharacteristicValid()
     {
@@ -20,6 +23,7 @@ public class PokemonClientTests
 
         var cancelationToken = new CancellationToken();
         
+        //Mocking the PokeApi services for testing only the Handle method behavior
         var pokemonService = new Mock<IPokemonClient>();
         pokemonService.Setup(_ => 
             _.GetPokemonByName(pokemonName, cancelationToken)).ReturnsAsync(await PokemonClientMock.GetPokemon(pokemonName)
@@ -34,7 +38,7 @@ public class PokemonClientTests
         var result = await sut.Handle(new GetPokemonDetails.Query { Name = pokemonName }, cancelationToken);
 
         ///Assert
-        Assert.NotNull(result);
+        result.Should().NotBeNull();
         result.IsSuccess.Should().BeTrue();
         result.Value.Name.Should().Be(pokemonName);
         result.Value.Type.Should().Be(type);
@@ -42,6 +46,9 @@ public class PokemonClientTests
 
     }
 
+    /// <summary>
+    /// Unit Test for a valid Pokemon with an invalid Characteristic
+    /// </summary>
     [Fact]
     public async Task GetPokemon_PokemonValid_CharacteristicInValid()
     {
@@ -53,6 +60,7 @@ public class PokemonClientTests
 
         var cancelationToken = new CancellationToken();
 
+        //Mocking the PokeApi services for testing only the Handle method behavior
         var pokemonService = new Mock<IPokemonClient>();
         pokemonService.Setup(_ =>
             _.GetPokemonByName(pokemonName, cancelationToken)).ReturnsAsync(await PokemonClientMock.GetPokemon(pokemonName)
@@ -67,13 +75,16 @@ public class PokemonClientTests
         var result = await sut.Handle(new GetPokemonDetails.Query { Name = pokemonName }, cancelationToken);
 
         ///Assert
-        Assert.NotNull(result);
+        result.Should().NotBeNull();
         result.IsSuccess.Should().BeTrue();
         result.Value.Name.Should().Be(pokemonName);
         result.Value.Type.Should().Be(type);
         result.Value.Description.Should().Be(description);
     }
 
+    /// <summary>
+    /// Unit Test for an inalid Pokemon
+    /// </summary>
     [Fact]
     public async Task GetPokemon_PokemonInValid()
     {
@@ -82,6 +93,7 @@ public class PokemonClientTests
 
         var cancelationToken = new CancellationToken();
 
+        //Mocking the PokeApi services for testing only the Handle method behavior
         var pokemonService = new Mock<IPokemonClient>();
         pokemonService.Setup(_ =>
             _.GetPokemonByName(pokemonName, cancelationToken)).ReturnsAsync(PokemonClientMock.GetPokemon_NotFound()
@@ -94,8 +106,8 @@ public class PokemonClientTests
         var result = await sut.Handle(new GetPokemonDetails.Query { Name = pokemonName }, cancelationToken);
 
         ///Assert
-        Assert.NotNull(result);
+        result.Should().NotBeNull();
         result.IsSuccess.Should().BeTrue();
-        result.Value.Should().Be(null);
+        result.Value.Should().BeNull();
     }
 }
