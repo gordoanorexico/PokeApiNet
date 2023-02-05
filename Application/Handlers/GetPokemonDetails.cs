@@ -24,11 +24,9 @@ public class GetPokemonDetails
     /// </summary>
     public class Handler : IRequestHandler<Query, Result<Response?>>
     {
-        //client for the pokemon services
         private readonly IPokemonClient _pokemonClient;
         public Handler(IPokemonClient pokemonClient)
         {
-            //services initialized by Dependency Injection
             _pokemonClient = pokemonClient;
         }
 
@@ -40,27 +38,20 @@ public class GetPokemonDetails
         /// <returns></returns>
         public async Task<Result<Response?>> Handle(Query request, CancellationToken cancellationToken)
         {
-            //Invoke the GetPokemonByName endpoint
             var pokemonResult = await _pokemonClient.GetPokemonByName(request.Name.ToLower(), cancellationToken);
             if (pokemonResult.Value is null)
             {
-                //If the return is success but without any Value, the handler will asume the answer as Not Found
                 return Result<Response>.Success(default);
             }
 
-            //Get the characteristic by the pokemons ID
             var characteristicResult = await _pokemonClient.GetCharacteristicById(pokemonResult.Value.Id, cancellationToken);
             
-            //if the mapping to responses get more complex in the future, we can implement AutoMapper or any other mapper solution
             Response response = new Response
             {
                 Name = request.Name,
-                //if the is null, it will be replaced with an empty string, and if the pokemon has more than one type, it will asume the first type as the default
                 Type = pokemonResult.Value.Types.FirstOrDefault()?.Type.Name ?? string.Empty,
-                //if the description is null, it will be replaced with an empty string, looks for the english description
                 Description = characteristicResult.Value?.Descriptions.FirstOrDefault(x => x.Language.Name == "en")?.Description ?? string.Empty
             };
-            //return a successful response with the data requested
             return Result<Response?>.Success(response);
         }
     }

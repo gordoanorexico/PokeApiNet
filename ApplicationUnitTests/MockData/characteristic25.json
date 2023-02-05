@@ -1,0 +1,78 @@
+{
+  "Id": 25,
+  "GeneModulo": 0,
+  "PossibleValues": null,
+  "HighestStat": null,
+  "Descriptions": [
+    {
+      "Description": "\u306E\u3093\u3073\u308A\u3059\u308B\u306E\u304C\u3000\u3059\u304D",
+      "Language": {
+        "Name": "ja-Hrkt",
+        "Url": "https://pokeapi.co/api/v2/language/1/"
+      }
+    },
+    {
+      "Description": "\uC720\uC720\uC790\uC801\uD568\uC744 \uC88B\uC544\uD568",
+      "Language": {
+        "Name": "ko",
+        "Url": "https://pokeapi.co/api/v2/language/3/"
+      }
+    },
+    {
+      "Description": "\u559C\u6B61\u60A0\u7136\u81EA\u5728",
+      "Language": {
+        "Name": "zh-Hant",
+        "Url": "https://pokeapi.co/api/v2/language/4/"
+      }
+    },
+    {
+      "Description": "Il aime se d\u00E9tendre",
+      "Language": {
+        "Name": "fr",
+        "Url": "https://pokeapi.co/api/v2/language/5/"
+      }
+    },
+    {
+      "Description": "Mag es, sich zu entspannen",
+      "Language": {
+        "Name": "de",
+        "Url": "https://pokeapi.co/api/v2/language/6/"
+      }
+    },
+    {
+      "Description": "Le gusta relajarse",
+      "Language": {
+        "Name": "es",
+        "Url": "https://pokeapi.co/api/v2/language/7/"
+      }
+    },
+    {
+      "Description": "Adora rilassarsi",
+      "Language": {
+        "Name": "it",
+        "Url": "https://pokeapi.co/api/v2/language/8/"
+      }
+    },
+    {
+      "Description": "Likes to relax",
+      "Language": {
+        "Name": "en",
+        "Url": "https://pokeapi.co/api/v2/language/9/"
+      }
+    },
+    {
+      "Description": "\u306E\u3093\u3073\u308A\u3059\u308B\u306E\u304C\u3000\u597D\u304D",
+      "Language": {
+        "Name": "ja",
+        "Url": "https://pokeapi.co/api/v2/language/11/"
+      }
+    },
+    {
+      "Description": "\u559C\u6B22\u60A0\u7136\u81EA\u5728",
+      "Language": {
+        "Name": "zh-Hans",
+        "Url": "https://pokeapi.co/api/v2/language/12/"
+      }
+    }
+  ]
+}

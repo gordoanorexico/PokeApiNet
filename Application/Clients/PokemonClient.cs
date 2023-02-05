@@ -1,6 +1,7 @@
 ﻿using Application.Core;
 using PokeApiNetDomain.Models;
 using System.Net.Http.Json;
+using System.Text.Json;
 
 namespace Application.Clients;
 /// <summary>
@@ -63,8 +64,8 @@ public class PokemonClient : IPokemonClient
         var response = await _httpClient.GetAsync($"{endpoint}/{parameter}", cancellationToken);
         if (response.IsSuccessStatusCode)
         {
-            var cars = await response.Content.ReadFromJsonAsync<T>();
-            return Result<T>.Success(cars);
+            var data = await response.Content.ReadFromJsonAsync<T>();
+            return Result<T>.Success(data);
         }
         if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
         {

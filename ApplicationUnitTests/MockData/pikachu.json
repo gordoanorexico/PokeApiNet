@@ -1,0 +1,839 @@
+{
+  "Id": 25,
+  "Name": "pikachu",
+  "BaseExperience": null,
+  "Height": 4,
+  "IsDefault": false,
+  "Order": 35,
+  "Weight": 60,
+  "Abilities": [
+    {
+      "IsHidden": false,
+      "Slot": 1,
+      "Ability": {
+        "Name": "static",
+        "Url": "https://pokeapi.co/api/v2/ability/9/"
+      }
+    },
+    {
+      "IsHidden": false,
+      "Slot": 3,
+      "Ability": {
+        "Name": "lightning-rod",
+        "Url": "https://pokeapi.co/api/v2/ability/31/"
+      }
+    }
+  ],
+  "Forms": [
+    {
+      "Name": "pikachu",
+      "Url": "https://pokeapi.co/api/v2/pokemon-form/25/"
+    }
+  ],
+  "GameIndicies": null,
+  "HeldItems": null,
+  "LocationAreaEncounters": null,
+  "Moves": [
+    {
+      "Move": {
+        "Name": "mega-punch",
+        "Url": "https://pokeapi.co/api/v2/move/5/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "pay-day",
+        "Url": "https://pokeapi.co/api/v2/move/6/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "thunder-punch",
+        "Url": "https://pokeapi.co/api/v2/move/9/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "slam",
+        "Url": "https://pokeapi.co/api/v2/move/21/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "double-kick",
+        "Url": "https://pokeapi.co/api/v2/move/24/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "mega-kick",
+        "Url": "https://pokeapi.co/api/v2/move/25/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "headbutt",
+        "Url": "https://pokeapi.co/api/v2/move/29/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "body-slam",
+        "Url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "take-down",
+        "Url": "https://pokeapi.co/api/v2/move/36/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "double-edge",
+        "Url": "https://pokeapi.co/api/v2/move/38/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "tail-whip",
+        "Url": "https://pokeapi.co/api/v2/move/39/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "growl",
+        "Url": "https://pokeapi.co/api/v2/move/45/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "surf",
+        "Url": "https://pokeapi.co/api/v2/move/57/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "submission",
+        "Url": "https://pokeapi.co/api/v2/move/66/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "counter",
+        "Url": "https://pokeapi.co/api/v2/move/68/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "seismic-toss",
+        "Url": "https://pokeapi.co/api/v2/move/69/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "strength",
+        "Url": "https://pokeapi.co/api/v2/move/70/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "thunder-shock",
+        "Url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "thunderbolt",
+        "Url": "https://pokeapi.co/api/v2/move/85/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "thunder-wave",
+        "Url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "thunder",
+        "Url": "https://pokeapi.co/api/v2/move/87/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "dig",
+        "Url": "https://pokeapi.co/api/v2/move/91/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "toxic",
+        "Url": "https://pokeapi.co/api/v2/move/92/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "agility",
+        "Url": "https://pokeapi.co/api/v2/move/97/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "quick-attack",
+        "Url": "https://pokeapi.co/api/v2/move/98/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "rage",
+        "Url": "https://pokeapi.co/api/v2/move/99/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "mimic",
+        "Url": "https://pokeapi.co/api/v2/move/102/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "double-team",
+        "Url": "https://pokeapi.co/api/v2/move/104/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "defense-curl",
+        "Url": "https://pokeapi.co/api/v2/move/111/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "light-screen",
+        "Url": "https://pokeapi.co/api/v2/move/113/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "reflect",
+        "Url": "https://pokeapi.co/api/v2/move/115/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "bide",
+        "Url": "https://pokeapi.co/api/v2/move/117/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "swift",
+        "Url": "https://pokeapi.co/api/v2/move/129/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "skull-bash",
+        "Url": "https://pokeapi.co/api/v2/move/130/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "flash",
+        "Url": "https://pokeapi.co/api/v2/move/148/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "rest",
+        "Url": "https://pokeapi.co/api/v2/move/156/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "substitute",
+        "Url": "https://pokeapi.co/api/v2/move/164/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "thief",
+        "Url": "https://pokeapi.co/api/v2/move/168/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "snore",
+        "Url": "https://pokeapi.co/api/v2/move/173/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "curse",
+        "Url": "https://pokeapi.co/api/v2/move/174/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "reversal",
+        "Url": "https://pokeapi.co/api/v2/move/179/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "protect",
+        "Url": "https://pokeapi.co/api/v2/move/182/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "sweet-kiss",
+        "Url": "https://pokeapi.co/api/v2/move/186/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "mud-slap",
+        "Url": "https://pokeapi.co/api/v2/move/189/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "zap-cannon",
+        "Url": "https://pokeapi.co/api/v2/move/192/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "detect",
+        "Url": "https://pokeapi.co/api/v2/move/197/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "endure",
+        "Url": "https://pokeapi.co/api/v2/move/203/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "charm",
+        "Url": "https://pokeapi.co/api/v2/move/204/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "rollout",
+        "Url": "https://pokeapi.co/api/v2/move/205/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "swagger",
+        "Url": "https://pokeapi.co/api/v2/move/207/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "spark",
+        "Url": "https://pokeapi.co/api/v2/move/209/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "attract",
+        "Url": "https://pokeapi.co/api/v2/move/213/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "sleep-talk",
+        "Url": "https://pokeapi.co/api/v2/move/214/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "return",
+        "Url": "https://pokeapi.co/api/v2/move/216/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "frustration",
+        "Url": "https://pokeapi.co/api/v2/move/218/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "dynamic-punch",
+        "Url": "https://pokeapi.co/api/v2/move/223/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "encore",
+        "Url": "https://pokeapi.co/api/v2/move/227/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "iron-tail",
+        "Url": "https://pokeapi.co/api/v2/move/231/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "hidden-power",
+        "Url": "https://pokeapi.co/api/v2/move/237/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "rain-dance",
+        "Url": "https://pokeapi.co/api/v2/move/240/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "rock-smash",
+        "Url": "https://pokeapi.co/api/v2/move/249/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "uproar",
+        "Url": "https://pokeapi.co/api/v2/move/253/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "facade",
+        "Url": "https://pokeapi.co/api/v2/move/263/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "focus-punch",
+        "Url": "https://pokeapi.co/api/v2/move/264/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "helping-hand",
+        "Url": "https://pokeapi.co/api/v2/move/270/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "brick-break",
+        "Url": "https://pokeapi.co/api/v2/move/280/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "knock-off",
+        "Url": "https://pokeapi.co/api/v2/move/282/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "secret-power",
+        "Url": "https://pokeapi.co/api/v2/move/290/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "fake-tears",
+        "Url": "https://pokeapi.co/api/v2/move/313/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "signal-beam",
+        "Url": "https://pokeapi.co/api/v2/move/324/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "covet",
+        "Url": "https://pokeapi.co/api/v2/move/343/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "volt-tackle",
+        "Url": "https://pokeapi.co/api/v2/move/344/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "calm-mind",
+        "Url": "https://pokeapi.co/api/v2/move/347/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "shock-wave",
+        "Url": "https://pokeapi.co/api/v2/move/351/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "natural-gift",
+        "Url": "https://pokeapi.co/api/v2/move/363/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "feint",
+        "Url": "https://pokeapi.co/api/v2/move/364/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "fling",
+        "Url": "https://pokeapi.co/api/v2/move/374/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "magnet-rise",
+        "Url": "https://pokeapi.co/api/v2/move/393/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "nasty-plot",
+        "Url": "https://pokeapi.co/api/v2/move/417/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "discharge",
+        "Url": "https://pokeapi.co/api/v2/move/435/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "captivate",
+        "Url": "https://pokeapi.co/api/v2/move/445/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "grass-knot",
+        "Url": "https://pokeapi.co/api/v2/move/447/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "charge-beam",
+        "Url": "https://pokeapi.co/api/v2/move/451/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "electro-ball",
+        "Url": "https://pokeapi.co/api/v2/move/486/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "round",
+        "Url": "https://pokeapi.co/api/v2/move/496/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "echoed-voice",
+        "Url": "https://pokeapi.co/api/v2/move/497/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "volt-switch",
+        "Url": "https://pokeapi.co/api/v2/move/521/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "electroweb",
+        "Url": "https://pokeapi.co/api/v2/move/527/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "wild-charge",
+        "Url": "https://pokeapi.co/api/v2/move/528/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "disarming-voice",
+        "Url": "https://pokeapi.co/api/v2/move/574/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "draining-kiss",
+        "Url": "https://pokeapi.co/api/v2/move/577/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "play-rough",
+        "Url": "https://pokeapi.co/api/v2/move/583/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "play-nice",
+        "Url": "https://pokeapi.co/api/v2/move/589/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "confide",
+        "Url": "https://pokeapi.co/api/v2/move/590/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "eerie-impulse",
+        "Url": "https://pokeapi.co/api/v2/move/598/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "electric-terrain",
+        "Url": "https://pokeapi.co/api/v2/move/604/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "nuzzle",
+        "Url": "https://pokeapi.co/api/v2/move/609/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "laser-focus",
+        "Url": "https://pokeapi.co/api/v2/move/673/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "rising-voltage",
+        "Url": "https://pokeapi.co/api/v2/move/804/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "tera-blast",
+        "Url": "https://pokeapi.co/api/v2/move/851/"
+      },
+      "VersionGroupDetails": null
+    },
+    {
+      "Move": {
+        "Name": "trailblaze",
+        "Url": "https://pokeapi.co/api/v2/move/885/"
+      },
+      "VersionGroupDetails": null
+    }
+  ],
+  "PastTypes": null,
+  "Sprites": {
+    "FrontDefault": null,
+    "FrontShiny": null,
+    "FrontFemale": null,
+    "FrontShinyFemale": null,
+    "BackDefault": null,
+    "BackShiny": null,
+    "BackFemale": null,
+    "BackShinyFemale": null,
+    "Other": {
+      "DreamWorld": null,
+      "Home": {
+        "FrontDefault": null,
+        "FrontFemale": null,
+        "FrontShiny": null,
+        "FrontShinyFemale": null
+      },
+      "OfficialArtwork": null
+    },
+    "Versions": {
+      "GenerationI": null,
+      "GenerationII": null,
+      "GenerationIII": null,
+      "GenerationIV": null,
+      "GenerationV": null,
+      "GenerationVI": null,
+      "GenerationVII": null,
+      "GenerationVIII": null
+    }
+  },
+  "Species": {
+    "Name": "pikachu",
+    "Url": "https://pokeapi.co/api/v2/pokemon-species/25/"
+  },
+  "Stats": [
+    {
+      "Stat": {
+        "Name": "hp",
+        "Url": "https://pokeapi.co/api/v2/stat/1/"
+      },
+      "Effort": 0,
+      "BaseStat": 0
+    },
+    {
+      "Stat": {
+        "Name": "attack",
+        "Url": "https://pokeapi.co/api/v2/stat/2/"
+      },
+      "Effort": 0,
+      "BaseStat": 0
+    },
+    {
+      "Stat": {
+        "Name": "defense",
+        "Url": "https://pokeapi.co/api/v2/stat/3/"
+      },
+      "Effort": 0,
+      "BaseStat": 0
+    },
+    {
+      "Stat": {
+        "Name": "special-attack",
+        "Url": "https://pokeapi.co/api/v2/stat/4/"
+      },
+      "Effort": 0,
+      "BaseStat": 0
+    },
+    {
+      "Stat": {
+        "Name": "special-defense",
+        "Url": "https://pokeapi.co/api/v2/stat/5/"
+      },
+      "Effort": 0,
+      "BaseStat": 0
+    },
+    {
+      "Stat": {
+        "Name": "speed",
+        "Url": "https://pokeapi.co/api/v2/stat/6/"
+      },
+      "Effort": 2,
+      "BaseStat": 0
+    }
+  ],
+  "Types": [
+    {
+      "Slot": 1,
+      "Type": {
+        "Name": "electric",
+        "Url": "https://pokeapi.co/api/v2/type/13/"
+      }
+    }
+  ]
+}

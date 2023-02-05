@@ -20,6 +20,10 @@ public class ExceptionMiddleware
         _env = env;
     }
 
+    /// <summary>
+    /// This method intercepts any call to the service and catches every possible Exception and manage the exception in the desired way
+    /// </summary>
+    /// <param name="context">the HTTP Context</param>
     public async Task InvokeAsync(HttpContext context)
     {
         try
@@ -28,12 +32,15 @@ public class ExceptionMiddleware
         }
         catch (Exception ex)
         {
+            //log the error in the output
             _logger.LogError(ex, ex.Message);
             context.Response.ContentType = "application/json";
+            //set the statuscode as an Internal Server Error
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
+            //in development the extended error will be returned in the response, otherwise a generic Server Error will be returned
             var response = _env.IsDevelopment()
-                ? new AppException(context.Response.StatusCode, ex.Message, ex.StackTrace?.ToString())
+                ? new AppException(context.Response.StatusCode, ex.Message, (ex.StackTrace?.ToString() ?? ""))
                 : new AppException(context.Response.StatusCode, "Server error");
 
             var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
